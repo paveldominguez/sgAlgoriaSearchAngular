@@ -1,0 +1,302 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+  font-family: arial, sans-serif;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr,
+dfn {
+  &[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+html, body {
+  //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  //-webkit-touch-callout: none;
+  height: 100%; // [1]
+  min-height: 100%; // [1]
+  text-size-adjust: 100%; // [2]
+  -webkit-font-smoothing: antialiased; // [3]
+  -moz-osx-font-smoothing: grayscale; // [3]
+  text-rendering: optimizelegibility;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; // [1]
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1rem; /* 2 */
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: button;
+
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  padding: 0; /* 1 */
+}
+
+[type="number"] {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    height: auto;
+  }
+}
+
+[type="search"] {
+  appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    appearance: none;
+  }
+}
+
+::-webkit-file-upload-button {
+  appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+template,
+[hidden] {
+  display: none;
+}

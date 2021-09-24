@@ -1,0 +1,38 @@
+<ais-instantsearch [config]="config" class="search">
+  <nav class="search-main-nav">
+    <ais-search-box></ais-search-box>
+    <ais-current-refinements
+      [transformItems]="transformItems"
+    ></ais-current-refinements>
+  </nav>
+
+  <aside class="search-categories">
+    <ais-clear-refinements></ais-clear-refinements>
+    <app-product-refinements></app-product-refinements>
+  </aside>
+
+  <main class="search-main">
+    <ais-sort-by
+      [items]="[
+    { value: 'ProductSiteWarehouseCatalog', label: 'Best Match' },
+    { value: 'SortByNameA-Z Virtual', label: 'Name asc' },
+    { value: 'SortByNameZ-A Virtual', label: 'Name des' },
+    { value: 'SalesYOY', label: 'SalesYOY' },
+  ]"
+    ></ais-sort-by>
+
+    <ais-hits class="search-hits">
+      <ng-template let-hits="hits">
+        <app-hit *ngFor="let hit of hits" [hit]="hit"></app-hit>
+      </ng-template>
+    </ais-hits>
+
+    <ais-pagination class="pagination"></ais-pagination>
+  </main>
+
+
+
+  <footer class="footer"></footer>
+</ais-instantsearch>
+
+

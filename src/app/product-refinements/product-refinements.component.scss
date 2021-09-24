@@ -1,0 +1,125 @@
+@import "core";
+
+h1 {
+  margin: 46px 28px 11px 0;
+  font-size: 22px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $charcoal-black;
+}
+
+h2 {
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  color: $charcoal-black;
+  border-top: solid 1px $light-gray;
+  padding-top: 28px;
+}
+
+
+ais-refinement-list[_ngcontent-jmg-c42] ais-RefinementList-item {
+  background: #941013;
+}
+
+
+ais-refinement-list ::ng-deep {
+  margin: 2em 0 22px;
+  display: block;
+
+  .ais-RefinementList {
+    &-item {
+      &--selected {
+        .ais-RefinementList-labelText {
+          font-weight: 600;
+          color: $charcoal-black;
+        }
+      }
+    }
+
+    &-label {
+
+      justify-content: space-between;
+    }
+
+    &-checkbox {
+      display: none;
+    }
+
+    &-labelText {
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 30px;
+      letter-spacing: normal;
+      color: $charcoal-black;
+      text-transform: capitalize;
+    }
+
+    &-count {
+      background: transparent;
+      border: none;
+      margin-left: 5px;
+      color: #757575;
+      //font-weight: bold;
+      font-size: 12px;
+    }
+
+    &-showMore {
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $charcoal-black;
+      margin-top: 2em;
+
+      padding: 0;
+      border: none;
+      background: none;
+      box-shadow: none;
+
+    }
+  }
+
+ .ais-Highlight mark {
+   border-bottom: 2px solid #941013 !important;
+   background-color: transparent;
+   color: #252524;
+   font-style: normal;
+   font-weight: normal;
+ }
+
+  .ais-SearchBox-form {
+    &:before {
+      display: none;
+    }
+  }
+
+  .ais-SearchBox-input {
+    height: 40px;
+    padding: 6px ;
+    border-radius: 3px;
+    border: solid 1px #c0c0c0;
+    background-color: $white;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $charcoal-black;
+    box-shadow: none;
+
+    &::placeholder {
+      color: #757575;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<img src="{{hit.ImageUrl}}" alt="{{hit.Name}}">
+
+<section>
+  <h3 class="name">{{hit.Name | titlecase}}</h3>
+  <p class="props">
+    {{hit.Size | titlecase}}
+    <span class="separator">•</span>
+    {{hit.BottlePerCase}} Units Per Case
+    <span class="separator">•</span>
+    {{hit.ContainerType | titlecase}} Container
+    <span class="separator">•</span>
+    {{hit.ClosureType | titlecase}} closure
+  </p>
+  <p class="availability">{{hit.StockStatus | titlecase}} </p>
+</section>
+
+

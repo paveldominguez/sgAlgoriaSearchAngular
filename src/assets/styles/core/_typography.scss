@@ -1,0 +1,39 @@
+$font-proximaNova: ProximaNova, sans-serif;
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/ProximaNova/proximanova-regular-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/ProximaNova/proximanova-regular-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/ProximaNova/Proxima_Nova_Light_It-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+
+//semi bold
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/ProximaNova/proximanova-semibold-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 600;
+}
+
+//bold
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/ProximaNova/proximanova-bold-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}

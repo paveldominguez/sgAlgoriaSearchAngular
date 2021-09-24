@@ -1,0 +1,27 @@
+$browser-context: 16;
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function em($pixels, $context: $browser-context, $no-comment: false, $unitless: false) {
+  $value: #{strip-unit($pixels)/strip-unit($context)};
+
+  @if ($unitless == false) {
+    $value: $value + em
+  }
+
+  @if ($no-comment == false) {
+    $value: $value #{'/*'$pixels + '/' + $context'*/'};
+  }
+
+  @return $value;
+}
+
+@function vw($pixels, $context: $browser-context, $unit: 'vw') {
+  @return #{strip-unit($pixels)/strip-unit($context)*100 + $unit} #{'/*'$pixels of $context'*/'};
+}
+

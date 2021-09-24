@@ -1,0 +1,48 @@
+@import "core";
+@import "reset";
+@import "//fonts.googleapis.com/css?family=Ubuntu";
+
+$mq-breakpoints: (
+  breakPointA: 320,
+  breakPointB: 480,
+  breakPointC: 600,
+  breakPointD: 768,
+  breakPointE: 1024,
+  breakPointF: 1080,
+  breakPointG: 1200,
+  breakPointH: 1440,
+  breakPointI: 1600,
+);
+
+$mq-show-breakpoints: (
+  breakPointA,
+  breakPointB,
+  breakPointC,
+  breakPointD,
+  breakPointE,
+  breakPointF,
+  breakPointG,
+  breakPointH,
+  breakPointI
+);
+
+html,
+body {
+  background: $white;
+
+  @each $breakpoint, $size in $mq-breakpoints {
+    @include mq(#{$breakpoint}) {
+      font-size: vw(16, $size);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+}
+

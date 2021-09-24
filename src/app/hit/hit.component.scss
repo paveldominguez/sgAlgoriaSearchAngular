@@ -1,0 +1,54 @@
+:host {
+  display: grid;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+  grid-template-columns: 144px auto;
+  grid-column-gap: 16px;
+  align-items: center;
+
+  &:first-of-type {
+    border-top: solid 1px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 144px;
+    height: 144px;
+    grid-row: 1/-1;
+    margin: 12px 0 9px;
+    background: aliceblue;
+  }
+
+  .name,
+  .props,
+  .availability {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+
+  .name {
+    font-size: 15px;
+    line-height: 18px;
+    color: #252524;
+  }
+
+  .props,
+  .availability {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .props {
+    color: #757575;
+  }
+
+  .availability {
+    color: #941013;
+  }
+
+  .separator {
+    margin: 0 1em;
+  }
+}
+
+

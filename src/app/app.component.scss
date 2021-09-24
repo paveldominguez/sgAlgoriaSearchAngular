@@ -1,0 +1,233 @@
+@import "core";
+
+.search {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-template-rows: auto auto auto 90px;
+  grid-template-areas:
+    "main-nav main-nav"
+    "categories main"
+    "categories pagination"
+    "footer footer";
+
+  &-main {
+    grid-area: main;
+    padding: 20px 22px 50px 22px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "auto"
+    "search-hits"
+    "pagination"
+  }
+
+  &-main-nav,
+  .footer {
+    padding: 21px;
+  }
+
+  &-main-nav {
+    grid-area: main-nav;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+  }
+
+  &-categories {
+    grid-area: categories;
+    border-right: solid 1px rgba(0, 0, 0, 0.15);
+    padding: 30px 15px 30px 20px;
+
+    ::ng-deep .ais-ClearRefinements-button {
+      height: 38px;
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: $white;
+      border-radius: 3px;
+      background: #a1151a;
+      box-shadow: none;
+      border: none;
+      text-transform: capitalize;
+
+      color: $charcoal-black;
+      border: solid 1px $charcoal-black;
+      background: $white;
+
+      &[disabled] {
+        color: $dark-grey;
+        background-color: $light-gray;
+        border: transparent;
+      }
+    }
+  }
+
+  &-hits {
+
+    grid-area: search-hits;
+
+    ::ng-deep .ais-Hits {
+      grid-area: hits;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 10px;
+      //grid-row-gap: 10px;
+    }
+  }
+
+  ::ng-deep .ais-CurrentRefinements {
+    margin-top: 10px;
+    display: block;
+
+    &-list {
+      margin-bottom: 10px;
+    }
+
+    &-item {
+      align-items: center;
+      border-radius: 3px;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      min-height: 1.5rem;
+      margin-right: 20px;
+      align-content: center;
+      justify-content: flex-start;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    &-label {
+      color: #757575;
+      font-size: 12px;
+    }
+
+    &-category {
+      display: flex;
+      margin-left: 7px;
+      border: 1px solid #c0c0c0;
+      padding: 6px 8px;
+      border-radius: 20px;
+      align-items: center;
+    }
+
+    &-categoryLabel {
+      font-size: 12px;
+      color: #252524;
+      text-transform: capitalize;
+    }
+
+    &-delete {
+      margin-left: 5px;
+      outline-width: 0;
+      font-size: 12px;
+    }
+  }
+}
+
+
+ais-search-box {
+  grid-area: search-box;
+  display: block;
+  margin-bottom: 5px;
+}
+
+ais-sort-by {
+  width: 200px;
+  justify-self: end;
+  margin: 33px 0 20px;
+}
+
+ais-current-refinements {
+  grid-area: current-refinements;
+  margin-bottom: 10px;
+}
+
+.pagination ::ng-deep {
+  grid-area: pagination;
+
+  .ais-Pagination {
+    margin: 30px 0;
+
+    &-link {
+      background: none;
+      border: none;
+      box-shadow: none;
+      font-size: 15px;
+      line-height: 15px;
+      padding: 14px 8px;
+      margin: 0 10px;
+    }
+
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      &--selected {
+        .ais-Pagination-link {
+          border-bottom: 2px solid #941013 !important;
+        }
+      }
+
+      &.ais-Pagination-item--firstPage,
+      &.ais-Pagination-item--previousPage,
+      &.ais-Pagination-item--lastPage,
+      &.ais-Pagination-item--nextPage {
+        .ais-Pagination-link {
+          color: #941013;
+          font-size: 20px !important;
+          line-height: 20px;
+        }
+      }
+
+      &.ais-Pagination-item--firstPage {
+        .ais-Pagination-link {
+          padding-left: 0;
+          margin-left: 0;
+        }
+
+        &::after {
+          font-size: 14px;
+          line-height: inherit;
+          content: "First Page";
+          letter-spacing: normal;
+          margin-left: 0;
+          margin-right: 17px;
+        }
+      }
+
+      &.ais-Pagination-item--lastPage {
+        &::before {
+          font-size: 14px;
+          line-height: inherit;
+          content: "Last Page";
+          letter-spacing: normal;
+          margin-right: 0;
+          margin-left: 17px;
+        }
+      }
+
+      &:not(.ais-Pagination-item--disabled) {
+        &.ais-Pagination-item--firstPage,
+        &.ais-Pagination-item--previousPage,
+        &.ais-Pagination-item--lastPage,
+        &.ais-Pagination-item--nextPage {
+
+        }
+      }
+    }
+  }
+
+}
+
+.footer {
+  grid-area: footer;
+  //height: 90px;
+  background: $black;
+}

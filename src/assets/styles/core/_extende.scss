@@ -1,0 +1,63 @@
+%card-toggle {
+  font-size: em(16);
+  cursor: default;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: em(7);
+
+    h2 {
+      font-size: em(18);
+      margin: 0;
+    }
+  }
+
+  p {
+    font-size: em(14);
+    line-height: em(20, 14);
+    letter-spacing: em(0.5, 14);
+  }
+}
+
+%center-content {
+  @include mq(breakPointE) {
+    width: em(934);
+    margin: 0 auto;
+  }
+}
+
+%side-notch-padding {
+  @include mq(
+    $from: breakPointA,
+    $and:
+      '(max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)'
+  ) {
+    padding-left: var(--device-safe-area-left, 0) !important;
+    padding-right: var(--device-safe-area-right, 0) !important;
+  }
+}
+
+%ipad-pro-top-notch {
+  @include mq(
+    $from: breakPointE,
+    $and: '(max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)'
+  ) {
+    padding-top: var(--device-safe-area-top, 0);
+  }
+}
+
+// Hide an element but keep the functionality without using display none.
+// Useful for example for a component that use a checkbox on the background like a button toggle
+%visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-transform: none;
+  width: 1px;
+}
