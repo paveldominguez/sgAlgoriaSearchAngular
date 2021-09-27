@@ -38,6 +38,19 @@ export class ProductRefinementsComponent implements OnInit {
     config: {
       attribute: 'Region',
     }
+  }, {
+    title: "Deals",
+    type: "toggle",
+    config: {
+      attribute: 'HasDeals',
+      label: "has deals"
+    }
+  }, {
+    title: "availability",
+    config: {
+      attribute: 'StockStatus',
+      searchable: false
+    }
   }];
 
 

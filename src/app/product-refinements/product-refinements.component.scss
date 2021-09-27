@@ -24,13 +24,8 @@ h2 {
 }
 
 
-ais-refinement-list[_ngcontent-jmg-c42] ais-RefinementList-item {
-  background: #941013;
-}
-
-
 ais-refinement-list ::ng-deep {
-  margin: 2em 0 22px;
+  margin: 22px 0;
   display: block;
 
   .ais-RefinementList {
@@ -90,23 +85,27 @@ ais-refinement-list ::ng-deep {
     }
   }
 
- .ais-Highlight mark {
-   border-bottom: 2px solid #941013 !important;
-   background-color: transparent;
-   color: #252524;
-   font-style: normal;
-   font-weight: normal;
- }
+  .ais-Highlight mark {
+    border-bottom: 2px solid #941013 !important;
+    background-color: transparent;
+    color: #252524;
+    font-style: normal;
+    font-weight: normal;
+  }
 
-  .ais-SearchBox-form {
-    &:before {
-      display: none;
+  .ais-SearchBox {
+    margin-bottom: 20px;
+
+    &-form {
+      &:before {
+        display: none;
+      }
     }
   }
 
   .ais-SearchBox-input {
     height: 40px;
-    padding: 6px ;
+    padding: 6px;
     border-radius: 3px;
     border: solid 1px #c0c0c0;
     background-color: $white;
@@ -120,6 +119,31 @@ ais-refinement-list ::ng-deep {
 
     &::placeholder {
       color: #757575;
+    }
+  }
+}
+
+ais-toggle ::ng-deep {
+  .ais-ToggleRefinement {
+    margin: 22px 0;
+    text-transform: capitalize;
+
+    &-label {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    &-labelText {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    &-count {
+      background: transparent;
+      border: none;
+      margin-left: 5px;
+      color: #757575;
+      //font-weight: bold;
+      font-size: 12px;
     }
   }
 }
