@@ -7,7 +7,6 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ProductRefinementsComponent implements OnInit {
 
-
   refinements: any = [{
     title: "Category",
     config: {
@@ -17,21 +16,16 @@ export class ProductRefinementsComponent implements OnInit {
     title: "Type",
     config: {
       attribute: 'Type',
-      showMoreLimit: 300
-
     }
   }, {
     title: "Varietals",
     config: {
       attribute: 'Varietal',
-      showMoreLimit: 1000
-
     }
   }, {
     title: "Countries",
     config: {
       attribute: 'Country',
-      showMoreLimit: 300
     }
   }, {
     title: "Regions",

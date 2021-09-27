@@ -14,11 +14,11 @@
     *ngSwitchDefault
     attribute="{{item.config.attribute}}"
     [transformItems]="transformItems"
-    [showMore]="item.config.showMore || true"
-    [searchable]="item.config.searchable || true"
-    [limit]="item.config.limit || 5"
-    [showMoreLimit]="item.config.showMoreLimit || 40"
-    [autoHideContainer]="item.config.autoHideContainer || false"
+    [showMore]="item.config.showMore ?? true"
+    [searchable]="item.config.searchable ?? true"
+    [limit]="item.config.limit ?? 5"
+    [showMoreLimit]="item.config.showMoreLimit ?? 40"
+    [autoHideContainer]="item.config.autoHideContainer ?? false"
 
     showMoreLabel="Show More +"
     showLessLabel="Show Less -"
