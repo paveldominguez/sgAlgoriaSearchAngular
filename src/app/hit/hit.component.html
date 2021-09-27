@@ -1,4 +1,4 @@
-<img src="{{hit.ImageUrl}}" alt="{{hit.Name}}">
+<img src="{{hit.ImageUrl}}" [default]="'./assets/images/fallback-image.png'" alt="{{hit.Name}}">
 
 <section>
   <h3 class="name">{{hit.Name | titlecase}}</h3>
