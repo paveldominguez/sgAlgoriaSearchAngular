@@ -33,6 +33,24 @@ export class ProductRefinementsComponent implements OnInit {
       attribute: 'Region',
     }
   }, {
+    title: "Price per Case",
+    type: "range",
+    config: {
+      attribute: 'FLPrice1',
+      min: '1',
+      max: '5000',
+      currency: ''
+    }
+  },{
+    title: "Price per Unit",
+    type: "range",
+    config: {
+      attribute: 'PricePerBottle1',
+      min: '1',
+      max: '5000',
+      currency: ''
+    }
+  }, {
     title: "Deals",
     type: "toggle",
     config: {

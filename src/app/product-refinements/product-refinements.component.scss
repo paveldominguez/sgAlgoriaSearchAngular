@@ -128,24 +128,7 @@
       }
     }
 
-    .ais-SearchBox-input {
-      height: 40px;
-      padding: 6px;
-      border-radius: 3px;
-      border: solid 1px #c0c0c0;
-      background-color: $white;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: $charcoal-black;
-      box-shadow: none;
 
-      &::placeholder {
-        color: #757575;
-      }
-    }
   }
 
   ais-toggle {
@@ -156,6 +139,27 @@
       &-label {
         flex-direction: row;
         justify-content: flex-start;
+      }
+
+      &-checkbox {
+        box-shadow: none;
+        background: $dark-grey;
+        height: 24px;
+        width: 44px;
+
+        &:after {
+          background: $white;
+          height: 22px;
+          width: 22px;
+        }
+
+        &:checked {
+          background: $charcoal-black;
+
+          &:after {
+            transform: translateX(20px);
+          }
+        }
       }
 
       &-labelText {
@@ -173,8 +177,75 @@
       }
     }
   }
-}
 
+  ais-range-input {
+    margin: 22px 0;
+    display: block;
+
+    .ais-RangeInput {
+      &-label {
+        display: flex;
+        align-items: center;
+
+      }
+
+      //&-currency {
+      //  margin-right: 5px;
+      //}
+
+      &-input {
+
+      }
+
+      &-separator {
+        margin: 0 5px;
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 30px;
+        letter-spacing: normal;
+        color: #252524;
+      }
+
+      &-submit {
+        height: 40px;
+        border-radius: 3px;
+        background: #a11e22;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+        border: none;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .ais-SearchBox-input,
+  .ais-RangeInput-input {
+    height: 38px;
+    padding: 6px;
+    border-radius: 3px;
+    border: solid 1px #c0c0c0;
+    background-color: $white;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $charcoal-black;
+    box-shadow: none;
+
+    &::placeholder {
+      color: #757575;
+    }
+  }
+}
 
 
 

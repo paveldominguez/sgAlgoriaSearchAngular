@@ -13,6 +13,20 @@
     [on]="'TRUE'"
   ></ais-toggle>
 
+  <ais-range-input
+    *ngSwitchCase="'range'"
+    attribute="{{item.config.attribute}}"
+    [min]="item.config.min"
+    [max]="item.config.max"
+    [currency]="item.config.currency"
+  ></ais-range-input>
+
+
+<!--  [precision]="number"-->
+<!--  currency="string"-->
+<!--  separator="string"-->
+<!--  submitLabel="string"-->
+
   <ais-refinement-list
     *ngSwitchDefault
     attribute="{{item.config.attribute}}"

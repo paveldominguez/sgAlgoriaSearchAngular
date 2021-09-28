@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ProductRefinementsComponent} from "./product-refinements.component";
-import {NgAisClearRefinementsModule, NgAisRefinementListModule, NgAisToggleModule} from "angular-instantsearch";
+import {
+  NgAisClearRefinementsModule,
+  NgAisRangeInputModule,
+  NgAisRefinementListModule,
+  NgAisToggleModule
+} from "angular-instantsearch";
 
 
 
@@ -13,7 +18,8 @@ import {NgAisClearRefinementsModule, NgAisRefinementListModule, NgAisToggleModul
     CommonModule,
     NgAisClearRefinementsModule,
     NgAisRefinementListModule,
-    NgAisToggleModule
+    NgAisToggleModule,
+    NgAisRangeInputModule
   ],
   exports: [
     ProductRefinementsComponent
