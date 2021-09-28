@@ -1,3 +1,5 @@
+<ais-clear-refinements></ais-clear-refinements>
+
 <h1>Explore Products</h1>
 
 <ng-container *ngFor="let item of refinements" [ngSwitch]="item.type">
@@ -8,6 +10,7 @@
     *ngSwitchCase="'toggle'"
     attribute="{{item.config.attribute}}"
     label="{{item.config.label}}"
+    [on]="'TRUE'"
   ></ais-toggle>
 
   <ais-refinement-list

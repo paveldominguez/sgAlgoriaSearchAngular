@@ -1,149 +1,183 @@
 @import "core";
 
-h1 {
-  margin: 46px 28px 11px 0;
-  font-size: 22px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: $charcoal-black;
-}
+:host ::ng-deep {
+  h1 {
+    margin: 46px 28px 11px 0;
+    font-size: 22px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $charcoal-black;
+  }
 
-h2 {
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: normal;
-  color: $charcoal-black;
-  border-top: solid 1px $light-gray;
-  padding-top: 28px;
-}
+  h2 {
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    color: $charcoal-black;
+    border-top: solid 1px $light-gray;
+    padding-top: 28px;
+  }
 
-
-ais-refinement-list ::ng-deep {
-  margin: 22px 0;
-  display: block;
-
-  .ais-RefinementList {
-    &-item {
-      &--selected {
-        .ais-RefinementList-labelText {
-          font-weight: 600;
-          color: $charcoal-black;
-        }
-      }
-    }
-
-    &-label {
-
-      justify-content: space-between;
-    }
-
-    &-checkbox {
-      display: none;
-    }
-
-    &-labelText {
-      font-size: 15px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 30px;
-      letter-spacing: normal;
-      color: $charcoal-black;
-      text-transform: capitalize;
-    }
-
-    &-count {
-      background: transparent;
-      border: none;
-      margin-left: 5px;
-      color: #757575;
-      //font-weight: bold;
-      font-size: 12px;
-    }
-
-    &-showMore {
+  ais-clear-refinements {
+    .ais-ClearRefinements-button {
+      height: 38px;
       font-size: 15px;
       font-weight: normal;
       font-stretch: normal;
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: $charcoal-black;
-      margin-top: 2em;
-
-      padding: 0;
-      border: none;
-      background: none;
+      text-align: center;
+      border-radius: 3px;
       box-shadow: none;
+      text-transform: capitalize;
+      color: $charcoal-black;
+      border: solid 1px $charcoal-black;
+      background: $white;
 
-    }
-  }
-
-  .ais-Highlight mark {
-    border-bottom: 2px solid #941013 !important;
-    background-color: transparent;
-    color: #252524;
-    font-style: normal;
-    font-weight: normal;
-  }
-
-  .ais-SearchBox {
-    margin-bottom: 20px;
-
-    &-form {
-      &:before {
-        display: none;
+      &[disabled] {
+        color: $dark-grey;
+        background: $light-gray;
+        border: transparent;
       }
     }
   }
 
-  .ais-SearchBox-input {
-    height: 40px;
-    padding: 6px;
-    border-radius: 3px;
-    border: solid 1px #c0c0c0;
-    background-color: $white;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: $charcoal-black;
-    box-shadow: none;
-
-    &::placeholder {
-      color: #757575;
-    }
-  }
-}
-
-ais-toggle ::ng-deep {
-  .ais-ToggleRefinement {
+  ais-refinement-list {
     margin: 22px 0;
-    text-transform: capitalize;
+    display: block;
 
-    &-label {
-      flex-direction: row;
-      justify-content: flex-start;
-    }
-    &-labelText {
-      flex: 1;
-      padding: 0 10px;
+    .ais-RefinementList {
+      &-item {
+        &--selected {
+          .ais-RefinementList-labelText {
+            font-weight: 600;
+            color: $charcoal-black;
+          }
+        }
+      }
+
+      &-label {
+
+        justify-content: space-between;
+      }
+
+      &-checkbox {
+        display: none;
+      }
+
+      &-labelText {
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 30px;
+        letter-spacing: normal;
+        color: $charcoal-black;
+        text-transform: capitalize;
+      }
+
+      &-count {
+        background: transparent;
+        border: none;
+        margin-left: 5px;
+        color: #757575;
+        //font-weight: bold;
+        font-size: 12px;
+      }
+
+      &-showMore {
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $charcoal-black;
+        margin-top: 2em;
+
+        padding: 0;
+        border: none;
+        background: none;
+        box-shadow: none;
+
+      }
     }
 
-    &-count {
-      background: transparent;
-      border: none;
-      margin-left: 5px;
-      color: #757575;
-      //font-weight: bold;
-      font-size: 12px;
+    .ais-Highlight mark {
+      border-bottom: 2px solid #941013 !important;
+      background-color: transparent;
+      color: #252524;
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    .ais-SearchBox {
+      margin-bottom: 20px;
+
+      &-form {
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    .ais-SearchBox-input {
+      height: 40px;
+      padding: 6px;
+      border-radius: 3px;
+      border: solid 1px #c0c0c0;
+      background-color: $white;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $charcoal-black;
+      box-shadow: none;
+
+      &::placeholder {
+        color: #757575;
+      }
+    }
+  }
+
+  ais-toggle {
+    .ais-ToggleRefinement {
+      margin: 22px 0;
+      text-transform: capitalize;
+
+      &-label {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      &-labelText {
+        flex: 1;
+        padding: 0 10px;
+      }
+
+      &-count {
+        background: transparent;
+        border: none;
+        margin-left: 5px;
+        color: #757575;
+        //font-weight: bold;
+        font-size: 12px;
+      }
     }
   }
 }
+
+
+
+
+
+
+

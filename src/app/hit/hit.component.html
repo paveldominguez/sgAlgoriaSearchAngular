@@ -7,11 +7,28 @@
     <span class="separator">•</span>
     {{hit.BottlePerCase}} Units Per Case
     <span class="separator">•</span>
+    Item ID {{hit.ItemNumber}}
+  </p>
+  <p class="props">
     {{hit.ContainerType | titlecase}} Container
     <span class="separator">•</span>
     {{hit.ClosureType | titlecase}} closure
   </p>
   <p class="availability">{{hit.StockStatus | titlecase}} </p>
+</section>
+
+<section class="price">
+  <label>
+    <span class="price-label">Case</span>
+    <span class="price-unit">{{hit.FLPrice1 | currency}}</span>
+  </label>
+
+  <label>
+    <span class="price-label">Unit</span>
+    <span class="price-unit">{{hit.PricePerBottle1 | currency}}</span>
+  </label>
+
+  <button class="price-button">Shop Now</button>
 </section>
 
 

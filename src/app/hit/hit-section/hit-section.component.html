@@ -1,0 +1,26 @@
+<nav class="search-hits-nav">
+  <ais-sort-by
+    [items]="[
+    { value: 'ProductSiteWarehouseCatalog', label: 'Best Match' },
+    { value: 'SortByNameA-Z Virtual', label: 'Name asc' },
+    { value: 'SortByNameZ-A Virtual', label: 'Name des' },
+    { value: 'SalesYOY', label: 'SalesYOY' },
+  ]"
+  ></ais-sort-by>
+
+  <ais-hits-per-page class="search-hists-per-page"
+                     [items]="[
+        { label: 'show 25', value: 20, default: true },
+        { label: 'show 50', value: 50 },
+        { label: 'show 100', value: 100 },
+      ]"
+  ></ais-hits-per-page>
+</nav>
+
+<ais-hits class="search-hits">
+  <ng-template let-hits="hits">
+    <app-hit *ngFor="let hit of hits" [hit]="hit"></app-hit>
+  </ng-template>
+</ais-hits>
+
+<ais-pagination class="search-hits-pagination"></ais-pagination>
