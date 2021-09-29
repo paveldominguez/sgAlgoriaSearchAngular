@@ -25,6 +25,14 @@
     padding-top: 28px;
   }
 
+  ais-hierarchical-menu,
+  ais-refinement-list,
+  ais-toggle,
+  ais-range-input {
+    margin: 22px 0;
+    display: block;
+  }
+
   ais-clear-refinements {
     .ais-ClearRefinements-button {
       height: 38px;
@@ -41,14 +49,6 @@
         border: transparent;
       }
     }
-  }
-
-  ais-hierarchical-menu,
-  ais-refinement-list,
-  ais-toggle,
-  ais-range-input {
-    margin: 22px 0;
-    display: block;
   }
 
   ais-hierarchical-menu {}
