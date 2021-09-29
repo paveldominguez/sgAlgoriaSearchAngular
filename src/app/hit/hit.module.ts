@@ -3,7 +3,13 @@ import { CommonModule } from '@angular/common';
 import {HitSectionComponent} from "./hit-section/hit-section.component";
 import {HitComponent} from "./hit.component";
 import {ImageFallbackDirective} from "./image-fallback.directive";
-import {NgAisHitsModule, NgAisHitsPerPageModule, NgAisPaginationModule, NgAisSortByModule} from "angular-instantsearch";
+import {
+  NgAisHitsModule,
+  NgAisHitsPerPageModule,
+  NgAisPaginationModule,
+  NgAisSortByModule,
+  NgAisStatsModule
+} from "angular-instantsearch";
 
 @NgModule({
   declarations: [
@@ -16,7 +22,8 @@ import {NgAisHitsModule, NgAisHitsPerPageModule, NgAisPaginationModule, NgAisSor
     NgAisPaginationModule,
     NgAisHitsModule,
     NgAisSortByModule,
-    NgAisHitsPerPageModule
+    NgAisHitsPerPageModule,
+    NgAisStatsModule
   ],
   exports : [
     HitSectionComponent,

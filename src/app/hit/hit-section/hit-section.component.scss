@@ -16,12 +16,11 @@
     &-nav {
       margin: 33px 0 24px;
       display: grid;
-      grid-template-columns: repeat(2, 150px);
-      grid-template-rows: 1fr;
+      grid-template-columns: 1fr repeat(2, 150px);
       grid-template-areas: "search-box hits-per-page";
       grid-column-gap: 20px;
-      justify-self: self-end;
       grid-area: search-hits-nav;
+      align-items: center;
 
       ais-search-box {
         grid-area: search-box;
