@@ -1,0 +1,57 @@
+@import "core";
+
+:host ::ng-deep {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  padding: 21px;
+
+  .ais-CurrentRefinements {
+    margin-top: 10px;
+    display: block;
+
+    &-list {
+      margin-bottom: 10px;
+    }
+
+    &-item {
+      align-items: center;
+      border-radius: 3px;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      min-height: 1.5rem;
+      margin-right: 20px;
+      align-content: center;
+      justify-content: flex-start;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    &-label {
+      color: #757575;
+      font-size: 12px;
+    }
+
+    &-category {
+      display: flex;
+      margin-left: 7px;
+      border: 1px solid #c0c0c0;
+      padding: 6px 8px;
+      border-radius: 20px;
+      align-items: center;
+    }
+
+    &-categoryLabel {
+      font-size: 12px;
+      color: #252524;
+      text-transform: capitalize;
+    }
+
+    &-delete {
+      margin-left: 5px;
+      outline-width: 0;
+      font-size: 12px;
+    }
+  }
+}

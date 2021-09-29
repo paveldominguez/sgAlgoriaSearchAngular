@@ -6,6 +6,12 @@
 
   <h2>{{item.title | titlecase }}</h2>
 
+
+  <ais-hierarchical-menu
+    *ngSwitchCase="'hierarchical-menu'"
+    [attributes]="item.config.attribute"
+  ></ais-hierarchical-menu>
+
   <ais-toggle
     *ngSwitchCase="'toggle'"
     attribute="{{item.config.attribute}}"

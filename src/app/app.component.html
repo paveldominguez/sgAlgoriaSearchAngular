@@ -1,15 +1,7 @@
 <ais-instantsearch [config]="config" class="search">
-  <nav class="search-main-nav">
-    <ais-search-box></ais-search-box>
-    <ais-current-refinements
-      [transformItems]="transformItems"
-    ></ais-current-refinements>
-  </nav>
-
+  <app-main-nav class="search-main-nav"></app-main-nav>
   <app-product-refinements class="search-categories"></app-product-refinements>
-
   <app-hit-section class="search-main"></app-hit-section>
-
   <footer class="footer"></footer>
 </ais-instantsearch>
 

@@ -18,16 +18,4 @@ export class AppComponent {
     searchClient: this.searchClient
   };
 
-  transformItems(items: any) {
-    return items.map((item: any) => {
-      const refinements = item.refinements.map((refinementsItem: any) => ({
-        ...refinementsItem,
-        label: refinementsItem.label.toLowerCase(),
-      }));
-
-      return {...item, refinements};
-    });
-  }
-
-
 }

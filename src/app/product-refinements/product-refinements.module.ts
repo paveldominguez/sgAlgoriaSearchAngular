@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ProductRefinementsComponent} from "./product-refinements.component";
 import {
-  NgAisClearRefinementsModule,
+  NgAisClearRefinementsModule, NgAisHierarchicalMenuModule,
   NgAisRangeInputModule,
   NgAisRefinementListModule,
   NgAisToggleModule
@@ -19,7 +19,8 @@ import {
     NgAisClearRefinementsModule,
     NgAisRefinementListModule,
     NgAisToggleModule,
-    NgAisRangeInputModule
+    NgAisRangeInputModule,
+    NgAisHierarchicalMenuModule
   ],
   exports: [
     ProductRefinementsComponent

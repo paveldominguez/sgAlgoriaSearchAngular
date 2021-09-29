@@ -7,63 +7,77 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ProductRefinementsComponent implements OnInit {
 
-  refinements: any = [{
-    title: "Category",
-    config: {
-      attribute: 'Category',
+  refinements: any = [
+    // {
+    //   title: "Category",
+    //   type: "hierarchical-menu",
+    //   config: {
+    //     attribute: [
+    //       ["Category", "type"]
+    //     ],
+    //   }
+    // },
+    {
+      title: "Category",
+      config: {
+        attribute: 'Category',
+      }
+    },
+    {
+      title: "Type",
+      config: {
+        attribute: 'Type',
+      }
+    },
+    {
+      title: "Varietals",
+      config: {
+        attribute: 'Varietal',
+      }
+    },
+    {
+      title: "Countries",
+      config: {
+        attribute: 'Country',
+      }
+    },
+    {
+      title: "Regions",
+      config: {
+        attribute: 'Region',
+      }
+    },
+    {
+      title: "Price per Case",
+      type: "range",
+      config: {
+        attribute: 'FLPrice1',
+      }
+    },
+    {
+      title: "Price per Unit",
+      type: "range",
+      config: {
+        attribute: 'PricePerBottle1',
+      }
+    },
+    {
+      title: "Deals",
+      type: "toggle",
+      config: {
+        attribute: 'HasDeals',
+        label: "has deals",
+
+      }
+    },
+    {
+      title: "availability",
+      config: {
+        attribute: 'StockStatus',
+        searchable: false
+      }
     }
-  }, {
-    title: "Type",
-    config: {
-      attribute: 'Type',
-    }
-  }, {
-    title: "Varietals",
-    config: {
-      attribute: 'Varietal',
-    }
-  }, {
-    title: "Countries",
-    config: {
-      attribute: 'Country',
-    }
-  }, {
-    title: "Regions",
-    config: {
-      attribute: 'Region',
-    }
-  }, {
-    title: "Price per Case",
-    type: "range",
-    config: {
-      attribute: 'FLPrice1',
-      min: '1',
-      max: '5000',
-      currency: ''
-    }
-  },{
-    title: "Price per Unit",
-    type: "range",
-    config: {
-      attribute: 'PricePerBottle1',
-      min: '1',
-      max: '5000',
-      currency: ''
-    }
-  }, {
-    title: "Deals",
-    type: "toggle",
-    config: {
-      attribute: 'HasDeals',
-      label: "has deals"
-    }
-  }, {
-    title: "availability",
-    config: {
-      attribute: 'StockStatus',
-      searchable: false
-    }
-  }];
+  ];
 
 
   constructor() {
