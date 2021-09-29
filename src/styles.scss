@@ -39,10 +39,12 @@ body {
 
 html {
   scroll-behavior: smooth;
+  background: $light-gray;
 }
 
 body {
   margin: 0;
   font-family: Ubuntu, sans-serif;
+  background: $light-gray;
 }
 

@@ -8,15 +8,17 @@ import {Component, OnInit} from '@angular/core';
 export class ProductRefinementsComponent implements OnInit {
 
   refinements: any = [
-    // {
-    //   title: "Category",
-    //   type: "hierarchical-menu",
-    //   config: {
-    //     attribute: [
-    //       ["Category", "type"]
-    //     ],
-    //   }
-    // },
+    {
+      title: "Shop Wine",
+      type: "hierarchical-menu",
+      config: {
+        attribute: [
+          'hierarchicalCategories.shopWine',
+          'hierarchicalCategories.shopWine1',
+          'hierarchicalCategories.shopWine2',
+        ],
+      }
+    },
 
     {
       title: "Category",
