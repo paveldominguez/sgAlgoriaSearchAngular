@@ -17,6 +17,7 @@ export class ProductRefinementsComponent implements OnInit {
     //     ],
     //   }
     // },
+
     {
       title: "Category",
       config: {
