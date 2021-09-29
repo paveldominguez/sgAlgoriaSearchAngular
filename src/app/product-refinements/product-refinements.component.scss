@@ -3,10 +3,9 @@
 :host ::ng-deep {
   border-right: solid 1px rgba(0, 0, 0, 0.15);
   padding: 30px 15px 30px 20px;
+  text-transform: capitalize;
 
-  h1 {
-    margin: 46px 28px 11px 0;
-    font-size: 22px;
+  h1, h2 {
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -15,14 +14,13 @@
     color: $charcoal-black;
   }
 
+  h1 {
+    font-size: 22px;
+    margin: 46px 28px 11px 0;
+  }
+
   h2 {
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
     font-size: 18px;
-    font-weight: 500;
-    line-height: normal;
-    color: $charcoal-black;
     border-top: solid 1px $light-gray;
     padding-top: 28px;
   }
@@ -30,16 +28,9 @@
   ais-clear-refinements {
     .ais-ClearRefinements-button {
       height: 38px;
-      font-size: 15px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
       text-align: center;
       border-radius: 3px;
       box-shadow: none;
-      text-transform: capitalize;
       color: $charcoal-black;
       border: solid 1px $charcoal-black;
       background: $white;
@@ -52,71 +43,38 @@
     }
   }
 
-  ais-refinement-list {
+  ais-hierarchical-menu,
+  ais-refinement-list,
+  ais-toggle,
+  ais-range-input {
     margin: 22px 0;
     display: block;
+  }
 
+  ais-hierarchical-menu {}
+
+  ais-refinement-list {
     .ais-RefinementList {
-      &-item {
-        &--selected {
-          .ais-RefinementList-labelText {
-            font-weight: 600;
-            color: $charcoal-black;
-          }
-        }
-      }
-
-      &-label {
-
-        justify-content: space-between;
+      &-item--selected .ais-RefinementList-labelText {
+        font-weight: 600;
       }
 
       &-checkbox {
         display: none;
       }
 
-      &-labelText {
-        font-size: 15px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 30px;
-        letter-spacing: normal;
-        color: $charcoal-black;
-        text-transform: capitalize;
-      }
-
-      &-count {
-        background: transparent;
-        border: none;
-        margin-left: 5px;
-        color: #757575;
-        //font-weight: bold;
-        font-size: 12px;
-      }
-
       &-showMore {
-        font-size: 15px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: $charcoal-black;
         margin-top: 2em;
-
         padding: 0;
         border: none;
         background: none;
         box-shadow: none;
-
       }
     }
 
     .ais-Highlight mark {
       border-bottom: 2px solid #941013 !important;
       background-color: transparent;
-      color: #252524;
       font-style: normal;
       font-weight: normal;
     }
@@ -124,20 +82,14 @@
     .ais-SearchBox {
       margin-bottom: 20px;
 
-      &-form {
-        &:before {
-          display: none;
-        }
+      &-form:before {
+        display: none;
       }
     }
-
-
   }
 
   ais-toggle {
     .ais-ToggleRefinement {
-      margin: 22px 0;
-      text-transform: capitalize;
 
       &-label {
         flex-direction: row;
@@ -166,49 +118,22 @@
       }
 
       &-labelText {
-        flex: 1;
         padding: 0 10px;
-      }
-
-      &-count {
-        background: transparent;
-        border: none;
-        margin-left: 5px;
-        color: #757575;
-        //font-weight: bold;
-        font-size: 12px;
       }
     }
   }
 
   ais-range-input {
-    margin: 22px 0;
-    display: block;
-
     .ais-RangeInput {
       &-label {
         display: flex;
         align-items: center;
-
-      }
-
-      //&-currency {
-      //  margin-right: 5px;
-      //}
-
-      &-input {
-
       }
 
       &-separator {
         margin: 0 5px;
         font-size: 15px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
         line-height: 30px;
-        letter-spacing: normal;
-        color: #252524;
       }
 
       &-submit {
@@ -236,17 +161,50 @@
     border-radius: 3px;
     border: solid 1px #c0c0c0;
     background-color: $white;
+    box-shadow: none;
+
+    &::placeholder {
+      color: $dark-grey;
+    }
+  }
+
+  .ais-ToggleRefinement-count,
+  .ais-HierarchicalMenu-count,
+  .ais-Menu-count,
+  .ais-RatingMenu-count,
+  .ais-RefinementList-count {
+    background: transparent;
+    border: none;
+    margin-left: 5px;
+    color: $dark-grey;
+    font-size: 12px;
+  }
+
+  .ais-RefinementList-labelText,
+  .ais-HierarchicalMenu-label,
+  .ais-ToggleRefinement-labelText {
+    flex: 1;
+  }
+
+  .ais-HierarchicalMenu-label,
+  .ais-SearchBox-input,
+  .ais-RangeInput-input,
+  .ais-RangeInput-separator,
+  .ais-RefinementList-labelText,
+  .ais-RefinementList-showMore,
+  .ais-ClearRefinements-button {
+    font-size: 15px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: $charcoal-black;
-    box-shadow: none;
+  }
 
-    &::placeholder {
-      color: #757575;
-    }
+  .ais-RefinementList-labelText,
+  .ais-HierarchicalMenu-label,
+  .ais-ToggleRefinement-labelText {
+    line-height: 30px;
   }
 }
 
