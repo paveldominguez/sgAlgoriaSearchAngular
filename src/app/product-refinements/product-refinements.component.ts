@@ -77,7 +77,8 @@ export class ProductRefinementsComponent implements OnInit {
       title: "availability",
       config: {
         attribute: 'StockStatus',
-        searchable: false
+        searchable: false,
+        showMore: false
       }
     }
   ];
